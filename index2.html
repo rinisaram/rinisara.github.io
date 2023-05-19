@@ -2,10 +2,13 @@
 <html>
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     .navbar {
-  background-color: #333;
-  padding: 16px;
+  background-color: #000000;
+  padding: 20 px;
 }
 
 .nav-list {
@@ -14,7 +17,9 @@
   padding: 0;
   display: flex;
 }
-
+body{
+font-family: 'Poppins', sans-serif;
+}
 .nav-list li {
   margin-right: 16px;
 }
@@ -26,7 +31,7 @@
 }
 
 .nav-list li a:hover {
-  color: #6aa5d6;
+  color: #c39ddf;
 }
     body {
       background-color: rgb(255, 255, 255);
@@ -49,7 +54,7 @@
       height: 35 vh; 
     }
     header {
-      background-color: #333;
+      background-color: #000000;
       color: #fff;
       padding: 20px;
       display: flex; 
@@ -91,6 +96,19 @@
       margin-bottom: 30px;
       font-family: 'Freight Neo Pro Bold', sans-serif;
     }
+    .contain {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  
+    .textboxarea {
+      width: 30%;
+      padding: 10px;
+      margin: 10px;
+      border: 1px solid #545050;
+      border-radius: 5px;
+    }
     
    
     .content .resume-button,
@@ -128,12 +146,80 @@
   .container div {
     flex: 0 0 50%; 
   }
+  .ml9 {
+  position: relative;
+  font-weight: 100;
+  font-size: 3em;
+}
+.textbox {
+      display: inline-block;
+      width: 30%;
+      padding: 10px;
+      margin: 10px;
+      border: 1px solid #545050;
+      border-radius: 10px; /* Add this line to make the corners round */
+    }
 
-   
+.ml9 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.ml9 .letter {
+  transform-origin: 50% 100%;
+  display: inline-block;
+  line-height: 1em;
+}
+
+.ml11 {
+  font-weight: 700;
+  font-size: 3.5em;
+  text-align: center;
+}
+
+.ml11 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+  
+}
+
+.ml11 .line {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #c49ce8;
+  transform-origin: 0 50%;
+  
+}
+
+.ml11 .line1 { 
+  top: 0; 
+  left: 0;
+  
+}
+
+.ml11 .letter {
+  display: inline-block;
+  line-height: 1em;
+  
+} 
   </style>
 </head>
 <body>
   <header>
+   
+    <div>
+      R i n i .
+    </div>
     <div>
       <nav class="navbar">
       <ul class="nav-list">
@@ -144,9 +230,6 @@
       </nav>
 
     </div>
-    <div>
-      R i n i .
-    </div>
   </header>
   <div class="container">
     <img src="C:\Users\DELL\Downloads\image.jpg" alt="Image Description">
@@ -155,14 +238,22 @@
   
   <div class="content">
     
-    <h3></h3><span class="waving-hand">&#x1F44B;</span>Hi! I'm</h3>
-    <h2 style="font-family: 'Freight Neo Pro Bold', sans-serif;">Rini Sara Markose</h2>
+    <h2></h3><span class="waving-hand">&#x1F44B;</span>Hi! I'm</h2>
+    
+<h2 class="ml9">
+  <span class="text-wrapper">
+    <span class="letters">Rini Sara Markose</span>
+  </span>
+</h1>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
     <p><b>A second-year student pursuing B.Tech in Computer Science and Engineering at Toc H Institute of Science and Technology.</p>
     <p>Ever since I was young, I've been captivated by the world of technology and its limitless potential to transform lives.  I've always had a strong passion for problem-solving and creating innovative solutions, which I believe aligns perfectly with the ever-evolving landscape of computer science.</b></p>
     <br>
     <a href="https://drive.google.com/file/d/1PWTEGbgnEo82U0Rs7Y4CjqJO99ffalZX/view" class="resume-button">Download Resume</a>
     <br>
-    <br>
+    
     <div>
       <a href="  https://www.linkedin.com/in/rini-sara/" class="social-button"><i class="fab fa-linkedin"></i></
         ></a>
@@ -171,34 +262,39 @@
       </div>
       <br>
       <br>
-      <br>
-      <br>
+     
+      
       
       
       <div id="experience-section">
         <div class="content">
-            <h1><u>Experience</u></h1>
+            <h1>Experience</h1>
             <div id="experience-section">
-              <h2><u>College Community Works</u></h2>
-              <div class="container">
-                <div>
+              <h2>College Community Works</h2>
+                <div class="textbox">
                   <h3>Tinkerhub Toc H -Campus Lead </h3>
-                  <p>Role: Planning and executing events, workshops, and hackathons, mentoring new members, managing daily activities, and building an active community of technology enthusiasts.</p>
+                  <p>Role: Planning and executing events, workshops, and hackathons, mentoring new members, managing daily activities, and building an active community of technology enthusiasts</p>
                 </div>
-                <div>
+              
+                <div class="textbox">
                   <h3>IEEE SB Toc H -MDC</h3>
-                  <p>Role: Supporting and enhancing the experience of IEEE members, ensuring their engagement, and providing opportunities for their personal and professional advancement.</p>
-                </div>
-                <div>
+                    <p>Role: Supporting and enhancing the experience of IEEE members, ensuring their engagement, and providing opportunities for their personal and professional advancement.</p>
+                  </div>
+              
+                <div class="textbox">
                   <h3>IEDC Toc H -Finance Lead </h3>
-                  <p>Role: Managing the financial operations (budgeting, monitoring, and reporting) and resources of the organization.</p>
+                  <p>Role: Managing the financial operations (budgeting, monitoring, and reporting) and resources to support the organization's growth and sustainability.</p>
                 </div>
-            </div>
-              <h2><u>Internships</u></h2>
-              <h3>Intern at DATAMATE INFOSOLUTIONS</h3>
-              <p>Role: Management Information System (MIS) report generation using HTML.</p>
-              <h2><u>Volunteering</u></h2>
-              <h3>Volunteer at Pehia Foundation</h3>
+                </div>
+              <h2>Internships</h2>
+              <div class="textbox">
+                <h3>Intern at DATAMATE INFOSOLUTIONS</h3>
+                  <p>Role: Role: Management Information System (MIS) report generation using HTML.</p>
+                </div>
+              <h2>Volunteering</h2>
+              <div class="textbox">
+                <h3>Volunteer at Pehia Foundation</h3>
+                </div>
               
             
           </div>
@@ -208,30 +304,82 @@
       <br>
       <br>
       <br>
-      <br>
-      <br>
-      <br>
       
       <div id="education-section">
-        <h1><u>Education</u></h1>
+      <div class="content">
+              <h1>Education</h1>
         
-        <div class="education-item">
+        <div class="textbox">
           <h3>College</h3>
-          <p>TocH Institute of Science and Technology(2021-present)</p>
+          <p>TocH Institute of Science and Technology</p>
+          <p>(2021-present)</p>
           <p>GPA: 8.0</p>
         </div>
         
-        <div class="education-item">
+        <div class="textbox">
           <h3>Schooling</h3>
           <p>Kendriya Vidyalaya</p>
-          <p>10th: 82.8%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12th: 93.4%</p>
+          <p>Matriculation: 82.8%</p>
+          <p>HSC: 93.4%</p>
         </div>
         
-      </div>
-      
-      
+    
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+  </div>
+      
+      
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script>
+      var textWrapper = document.querySelector('.ml9 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml9 .letter',
+    scale: [0, 1],
+    duration: 1500,
+    elasticity: 600,
+    delay: (el, i) => 45 * (i+1)
+  }).add({
+    targets: '.ml9',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+  var textWrapper = document.querySelector('.ml11 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml11 .line',
+    scaleY: [0,1],
+    opacity: [0.5,1],
+    easing: "easeOutExpo",
+    duration: 700
+  })
+  .add({
+    targets: '.ml11 .line',
+    translateX: [0, document.querySelector('.ml11 .letters').getBoundingClientRect().width + 10],
+    easing: "easeOutExpo",
+    duration: 700,
+    delay: 100
+  }).add({
+    targets: '.ml11 .letter',
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=775',
+    delay: (el, i) => 34 * (i+1)
+  }).add({
+    targets: '.ml11',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+    </script>
   </body>
   </html>
 
