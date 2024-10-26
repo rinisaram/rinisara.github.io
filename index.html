@@ -1,401 +1,892 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    .navbar {
-  background-color: #000000;
-  padding: 20 px;
-}
-
-.nav-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-body{
-font-family: 'Poppins', sans-serif;
-}
-.nav-list li {
-  margin-right: 16px;
-}
-
-.nav-list li a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.nav-list li a:hover {
-  color: #c39ddf;
-}
-    body {
-      background-color: rgb(255, 255, 255);
-    }
-    @keyframes wave {
-      0% { transform: rotate(0deg); }
-      25% { transform: rotate(45deg); }
-      50% { transform: rotate(0deg); }
-    }
-    
-    .waving-hand {
-      animation: wave 2s infinite;
-      display: inline-block;
-      font-size: 24px;
-    }
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 35 vh; 
-    }
-    header {
-      background-color: #000000;
-      color: #fff;
-      padding: 20px;
-      display: flex; 
-      justify-content: space-between; 
-    }
-
-    
-    header a {
-      color: #ffffff;
-      text-decoration: none;
-      margin-left: 10px; /* Add spacing between the links */
-    }
-
-    
-    .content {
-      text-align: center;
-      margin-top: 40px;
-    }
-
-    
-    .content p {
-      font-size: 18px;
-      line-height: 1.6;
-      margin-bottom: 10px;
-      color: #555;
-    }
-    
-    
-    .content h3 {
-      color: #333;
-      font-size: 24px;
-      margin-bottom: 15px;
-      font-family: 'Freight Neo Pro Bold', sans-serif;
-    }
-    
-    .content h2 {
-      color: #2c2568;
-      font-size: 36px;
-      margin-bottom: 30px;
-      font-family: 'Freight Neo Pro Bold', sans-serif;
-    }
-    .contain {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
-  
-    .textboxarea {
-      width: 30%;
-      padding: 10px;
-      margin: 10px;
-      border: 1px solid #545050;
-      border-radius: 5px;
-    }
-    
-   
-    .content .resume-button,
-    .content .social-button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #2c2568;
-      color: #fff;
-      text-decoration: none;
-      font-family: Arial, sans-serif;
-      font-size: 16px;
-      border-radius: 86px; 
-      transition: background-color 0.3s ease;
-    }
-    
-    .content .resume-button:hover,
-    .content .social-button:hover {
-      background-color: #555;
-    }
-    
-
-    .content .social-button {
-      margin: 10px;
-      padding: 8px;
-    }
-    
-    .content .social-button i {
-      font-size: 24px;
-    }
-    .container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .container div {
-    flex: 0 0 50%; 
-  }
-  .ml9 {
-  position: relative;
-  font-weight: 100;
-  font-size: 3em;
-}
-footer {
-      background-color: #f5f5f5;
-      padding: 20px;
-      text-align: center;
-      font-size: 14px;
-    } 
-.textbox {
-      display: inline-block;
-      width: 30%;
-      padding: 10px;
-      margin: 10px;
-      border: 1px solid #545050;
-      border-radius: 10px; /* Add this line to make the corners round */
-    }
-
-.ml9 .text-wrapper {
-  position: relative;
-  display: inline-block;
-  padding-top: 0.2em;
-  padding-right: 0.05em;
-  padding-bottom: 0.1em;
-  overflow: hidden;
-}
-
-.ml9 .letter {
-  transform-origin: 50% 100%;
-  display: inline-block;
-  line-height: 1em;
-}
-
-.ml11 {
-  font-weight: 700;
-  font-size: 3.5em;
-  text-align: center;
-}
-
-.ml11 .text-wrapper {
-  position: relative;
-  display: inline-block;
-  padding-top: 0.1em;
-  padding-right: 0.05em;
-  padding-bottom: 0.15em;
-  
-}
-
-.ml11 .line {
-  opacity: 0;
-  position: absolute;
-  left: 0;
-  height: 100%;
-  width: 3px;
-  background-color: #c49ce8;
-  transform-origin: 0 50%;
-  
-}
-
-.ml11 .line1 { 
-  top: 0; 
-  left: 0;
-  
-}
-
-.ml11 .letter {
-  display: inline-block;
-  line-height: 1em;
-  
-} 
-  </style>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <header>
-   
-    <div>
-      R i n i .
-    </div>
-    <div>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/rini sq.jpg" alt="Your Name" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Rini Sara Markose">Rini Sara Markose</h1>
+
+          <p class="title">Web Developer | Community Evangelist</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:rini15sara@gmail.com" class="contact-link">rini15sara@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+919911095370" class="contact-link">+91 9911095370</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="logo-github"></ion-icon>
+            </div>
+          
+            <div class="contact-info">
+              <p class="contact-title">GitHub</p>
+              <a href="https://github.com/rinisaram" class="contact-link">rinisaram</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Linkedin </p>
+
+              <a href="https://www.linkedin.com/in/rini-sara/" class="contact-link">Rini-Sara</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Kochi, India</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
       <nav class="navbar">
-      <ul class="nav-list">
-      <li><a href="#">Home</a></li>
-      <li><a href="#experience-section">Experience</a></li>
-      <li><a href="#education-section">Education</a></li>
-      </ul>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
       </nav>
 
-    </div>
-  </header>
-  <div class="container">
-    <img src="image.jpg" alt="Image Description">
-  </div>
-  
-  
-  <div class="content">
-    
-    <h2></h3><span class="waving-hand">&#x1F44B;</span>Hi! I'm</h2>
-    
-<h2 class="ml9">
-  <span class="text-wrapper">
-    <span class="letters">Rini Sara Markose</span>
-  </span>
-</h1>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
-    <p><b>A final year student pursuing B.Tech in Computer Science and Engineering at Toc H Institute of Science and Technology.</p>
-    <p>Ever since I was young, I've been captivated by the world of technology and its limitless potential to transform lives.  I've always had a strong passion for problem-solving and creating innovative solutions, which I believe aligns perfectly with the ever-evolving landscape of computer science.</b></p>
-    <br>
-    <a href="https://drive.google.com/file/d/1PWTEGbgnEo82U0Rs7Y4CjqJO99ffalZX/view" class="resume-button">Download Resume</a>
-    <br>
-    
-    <div>
-      <a href="  https://www.linkedin.com/in/rini-sara/" class="social-button"><i class="fab fa-linkedin"></i></
-        ></a>
-        <a href="mailto:rini15sara@gmail.com" class="social-button"><i class="far fa-envelope"></i></a>
-        <a href="https://github.com/rinisaram" class="social-button"><i class="fab fa-github"></i></a>
-      </div>
-      <br>
-      <br>
-     
-      
-      
-      
-      <div id="experience-section">
-        <div class="content">
-            <h1>Experience</h1>
-            <div id="experience-section">
-              
-                <div class="textbox">
-                  <h2>College Community </h2>
-                  <h3>Tinkerhub Toc H -Campus Lead </h3>
-                  <p>Role: Planning and executing events, workshops, and hackathons, mentoring new members, managing daily activities, and building an active community of technology enthusiasts</p>
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            As a fourth-year B.Tech student in Computer Science and Engineering, I am passionate about innovation and problemsolving.
+            I seek opportunities to leverage my skills in a dynamic environment and contribute to impactful projects. 
+
+          <p>
+            With experience as a community evangelist, I have inspired many newcomers to tech. 
+          </p>
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+          
+              <div class="service-icon-box">
+                <!-- Ionicon for web design -->
+                <ion-icon name="brush-outline" style="font-size: 40px ;color: hsl(45, 100%, 71%);"></ion-icon>
+              </div>
+          
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web Design</h4>
+          
+                <p class="service-item-text">
+                  The most modern and high-quality design made at a professional level.
+                </p>
+              </div>
+          
+            </li>
+          
+            <li class="service-item">
+          
+              <div class="service-icon-box">
+                <!-- Ionicon for web development -->
+                <ion-icon name="code-slash-outline" style="font-size: 40px;color: hsl(45, 100%, 71%);"></ion-icon>
+              </div>
+          
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web Development</h4>
+          
+                <p class="service-item-text">
+                  High-quality development of websites at the professional level.
+                </p>
+              </div>
+          
+            </li>
+          
+            <li class="service-item">
+          
+              <div class="service-icon-box">
+                <!-- Ionicon for video editing -->
+                <ion-icon name="videocam-outline" style="font-size: 40px;color: hsl(45, 100%, 71%);"></ion-icon>
+              </div>
+          
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Video Editing</h4>
+          
+                <p class="service-item-text">
+                  Professional editing of videos with creative storytelling.
+                </p>
+              </div>
+          
+            </li>
+          
+            <li class="service-item">
+          
+              <div class="service-icon-box">
+                <!-- Ionicon for community evangelist -->
+                <ion-icon name="people-outline" style="font-size: 40px;color: hsl(45, 100%, 71%);"></ion-icon>
+              </div>
+          
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Community Evangelist</h4>
+          
+                <p class="service-item-text">
+                  Building and nurturing a thriving online community.
+                </p>
+              </div>
+          
+            </li>
+          
+          </ul>
+          
+          
+        </section>
+
+
+        <!--
+          - testimonials
+        -->
+
+        <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Testimonials</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Moosa Mehar MP</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Rini is an exceptional leader at Toc H TinkerHub community. 
+                    Her commitment to fostering a collaborative and innovative environment 
+                    has been instrumental in the growth of the campus community. 
+                    RINI's leadership skills and dedication to technology make her a valuable
+                    asset to any organization
+                  </p>
                 </div>
-              
-                <div class="textbox">
-                  <h2>College Community </h2>
-                  <h3>IEEE SB Toc H -MDC</h3>
-                    <p>Role: Supporting and enhancing the experience of IEEE members, ensuring their engagement, and providing opportunities for their personal and professional advancement.</p>
-                  </div>
-              
-                <div class="textbox">
-                  <h2>College Community </h2>
-                  <h3>IEDC Toc H -Finance Lead </h3>
-                  <p>Role: Managing the financial operations (budgeting, monitoring, and reporting) and resources to support the organization's growth and sustainability.</p>
-                </div>
-                </div>
-              
-              <div class="textbox">
-                <h2>Internship</h2>
-                <h3>Intern at DATAMATE INFOSOLUTIONS</h3>
-                  <p>Role: Management Information System (MIS) report generation using HTML.</p>
-                </div>
-              <div class="textbox">
-                
-              <h2>Volunteering</h2>
-                <h3>Volunteer at Pehia Foundation</h3>
-                <p>Role: Event coordination and community outreach.</p>
-                </div>
-              
+
+              </div>
+            </li>
+
             
+            
+           
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+
+        <!--
+          - clients
+        -->
+
+        <section class="clients">
+
+          
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
           </div>
-      </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">BACHELOR OF TECHNOLOGY in Computer Science and Engineering </h4>
+
+              <span>2021 — 2025</span>
+
+              <p class="timeline-text">
+                Toc H Institute of Science and Technology | CGPA: 7.7
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">SENIOR SECONDARY EDUCATION
+              </h4>
+
+              <span>2020 - 2021</span>
+
+              <p class="timeline-text">
+                Kendriya Vidyalaya, Kerala | CGPA: 9.3
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">SECONDARY EDUCATION
+              </h4>
+
+              <span>2018 - 2019</span>
+
+              <p class="timeline-text">
+                Kendriya Vidyalaya, Delhi | CGPA: 8.4
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">COMPUTER SOCIETY CHAIR , IEEE CS SBC Toc H</h4>
+
+              <span>March 2024- present</span>
+
+              <p class="timeline-text">
+                
+              • Planning and executing events, workshops, and hackathons, mentoring new members, managing daily activities,
+and building an active community of technology enthusiasts
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">TREASURER , IEEE LINK</h4>
+
+              <span>January 2024- present</span>
+
+              <p class="timeline-text">
+                • Managing the financial affairs and resources of the organization, including budgeting, financial reporting, and
+ensuring compliance with financial regulations.
+
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">CAMPUS LEAD , TINKER HUB TOC H KOCHI </h4>
+
+              <span>April 2023- July 2024</span>
+
+              <p class="timeline-text">
+              • Planning and executing tech events, workshops, and hackathons; mentoring new members; managing daily
+              operations; building and nurturing a dynamic tech community
+              </p>
+              <p class="timeline-text">
+              • Enhancing engagement through targeted outreach efforts; and continuously assessing and refining event effectiveness
+              </p>
+
+            </li>
+
+            <li class="timeline-item"></li>
+
+              <h4 class="h4 timeline-item-title">MEMBERSHIP DEVELOPMENT COORDINATOR , IEEE SB TOC H
+              </h4>
+
+              <span>March 2023 - December 2023</span>
+
+              <p class="timeline-text">            
+              • Supporting and enhancing the experience of IEEE members, ensuring their engagement, and providing opportunities for their personal and professional advancement.
+
+              </p>
+
+            </li>
+
+            <li class="timeline-item"></li>
+
+              <h4 class="h4 timeline-item-title">FINANCE LEAD IEDC TIST
+              </h4>
+
+              <span>March 2022- March 2023</span>
+
+              <p class="timeline-text">            
+                • Oversees budgeting, financial planning, resource allocation, and ensures financial sustainability and compliance.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Web development</h5>
+                <data value="80">60%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 60%;"></div>
+              </div>
+
+            </li>
+
+            
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Video Editing</h5>
+                <data value="90">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Management</h5>
+                <data value="50">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 100%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item"></li>
+
+              <div class="title-wrapper">
+                <h5 class="h5">Graphic Designer</h5>
+                <data value="90">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Design</button>
+            </li>
+
+
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web design</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Finance</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Orizon</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Fundo</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Brawlhalla</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                </figure>
+
+                <h3 class="project-title">DSM.</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">MetaSpark</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Summary</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Task Manager</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Arrival</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
       
-      </div>
-      <br>
-      <br>
-      <br>
-      
-      <div id="education-section">
-      <div class="content">
-              <h1>Education</h1>
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+       
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
         
-        <div class="textbox">
-          <h3>College</h3>
-          <p>TocH Institute of Science and Technology</p>
-          <p>(2021-present)</p>
-          <p>GPA: 8.0</p>
-        </div>
+          <form action="https://formspree.io/f/mgvwbggz" method="POST" class="form" data-form>
         
-        <div class="textbox">
-          <h3>Schooling</h3>
-          <p>Kendriya Vidyalaya</p>
-          <p>Matriculation: 82.8%</p>
-          <p>HSC: 93.4%</p>
-        </div>
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
         
-    
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+        
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+        
+            <button class="form-btn" type="submit" data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+        
+          </form>
+        
+        </section>
+        
+        
+        
+      </article>
+
     </div>
-  </div>
-      
-      
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <script>
-      var textWrapper = document.querySelector('.ml9 .letters');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-anime.timeline({loop: false})
-  .add({
-    targets: '.ml9 .letter',
-    scale: [0, 1],
-    duration: 1500,
-    elasticity: 600,
-    delay: (el, i) => 45 * (i+1)
-  }).add({
-    targets: '.ml9',
-    opacity: 1,
-    duration: 1000,
-    easing: "easeOutExpo",
-    delay: 1000
-  });
-  var textWrapper = document.querySelector('.ml11 .letters');
-textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+  </main>
 
-anime.timeline({loop: true})
-  .add({
-    targets: '.ml11 .line',
-    scaleY: [0,1],
-    opacity: [0.5,1],
-    easing: "easeOutExpo",
-    duration: 700
-  })
-  .add({
-    targets: '.ml11 .line',
-    translateX: [0, document.querySelector('.ml11 .letters').getBoundingClientRect().width + 10],
-    easing: "easeOutExpo",
-    duration: 700,
-    delay: 100
-  }).add({
-    targets: '.ml11 .letter',
-    opacity: [0,1],
-    easing: "easeOutExpo",
-    duration: 600,
-    offset: '-=775',
-    delay: (el, i) => 34 * (i+1)
-  }).add({
-    targets: '.ml11',
-    opacity: 0,
-    duration: 1000,
-    easing: "easeOutExpo",
-    delay: 1000
-  });
-    </script>
-    <footer>
-      <p>&copy; 2023 My Website. All rights reserved.</p>
-    </footer>
-  </body>
-  </html>
 
-  
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
